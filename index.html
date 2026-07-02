@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>집중 타이머</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <img src="logo.png" alt="로고" class="logo">
+    <p class="eyebrow">FOCUS TIMER</p>
+    <h1 id="statusText">내가 통제할 수 있는 유일한 것은 나의 시간</h1>
+
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 220 220">
+        <circle class="ring-bg" cx="110" cy="110" r="100"></circle>
+        <circle class="ring-progress" id="ringProgress" cx="110" cy="110" r="100"></circle>
+      </svg>
+      <div class="time-display" id="timeDisplay">15:00</div>
+    </div>
+
+    <div class="presets">
+      <button class="preset-btn" data-minutes="15">15분</button>
+      <button class="preset-btn" data-minutes="30">30분</button>
+    </div>
+
+    <div class="controls">
+      <button class="control-btn primary" id="startPauseBtn">시작</button>
+      <button class="control-btn" id="resetBtn">초기화</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

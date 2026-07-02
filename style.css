@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "GangwonEduModu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-start: #fdf3f7;
+  --bg-end: #eef3fb;
+  --card-bg: #ffffffcc;
+  --lavender: #cdb7e8;
+  --mint: #a9dfd8;
+  --peach: #f6c9b0;
+  --pink: #f3b8c6;
+  --text-main: #4a4458;
+  --text-sub: #9a92ab;
+  --ring-track: #ece7f3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "GangwonEduModu", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 20%, var(--bg-start), transparent 60%),
+              radial-gradient(circle at 80% 80%, var(--bg-end), transparent 60%),
+              linear-gradient(135deg, #fdf6f0, #eef2fb);
+  color: var(--text-main);
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 32px;
+  padding: 40px 32px 36px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(150, 130, 170, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+
+.cat-logo {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 6px 16px rgba(205, 183, 232, 0.4);
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--text-sub);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: var(--text-main);
+  min-height: 26px;
+  transition: opacity 0.3s ease;
+}
+
+.ring-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 32px;
+}
+
+.ring {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: var(--ring-track);
+  stroke-width: 14;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: url(#none);
+  stroke: var(--lavender);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-dasharray: 628;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear, stroke 0.6s ease;
+}
+
+.time-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  font-variant-numeric: tabular-nums;
+}
+
+.presets {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.preset-btn {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--mint), #cdeee7);
+  color: #2f6459;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 16px rgba(169, 223, 216, 0.45);
+}
+
+.preset-btn:nth-child(2) {
+  background: linear-gradient(135deg, var(--peach), #fbe0cd);
+  color: #8a4e28;
+  box-shadow: 0 6px 16px rgba(246, 201, 176, 0.45);
+}
+
+.preset-btn:hover {
+  transform: translateY(-2px);
+}
+
+.preset-btn:active {
+  transform: translateY(0);
+}
+
+.preset-btn.active {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: -3px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.control-btn {
+  flex: 1;
+  padding: 15px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #f1edf7;
+  color: var(--text-main);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+}
+
+.control-btn.primary {
+  background: linear-gradient(135deg, var(--lavender), var(--pink));
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(205, 183, 232, 0.5);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 420px) {
+  .ring-wrap {
+    width: 190px;
+    height: 190px;
+  }
+  .time-display {
+    font-size: 38px;
+  }
+}

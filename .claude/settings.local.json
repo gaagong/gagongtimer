@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where node *)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "Bash(python -c \"print\\(1\\)\")",
+      "Bash(echo \"exit:$?\")",
+      "WebSearch",
+      "Bash(curl -sI \"https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff\")",
+      "Bash(curl -sI \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop\")"
+    ]
+  }
+}
